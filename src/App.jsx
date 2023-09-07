@@ -13,7 +13,7 @@ function App() {
         <h1>Styled-Components</h1>
         <br />
         <nav style={{display: "flex", justifyContent: "space-evenly", width: "100%"}}>
-          <a href="https://styled-components.com/">documentation</a>
+          <a href="https://styled-components.com/">Docs</a>
           <a href="https://www.npmjs.com/package/styled-components">npm</a>
         </nav>
       </header>
