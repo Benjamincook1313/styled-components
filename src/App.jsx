@@ -1,34 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <header>
+        <h1>Styled-Components</h1>
+        <nav style={{display: "flex", justifyContent: "space-evenly", width: "100vw"}}>
+          <a href="https://styled-components.com/">documentation</a>
+          <a href="https://www.npmjs.com/package/styled-components">npm</a>
+        </nav>
+      </header>
+
+      <section>
+        <form>
+          <label htmlFor="username" >username: </label>
+          <input name="username" type="text" placeholder="JohnDoe55" />
+          <br />
+          <label htmlFor="pass">password:</label>
+          <input name="pass" type="password" placeholder='asdf1234@'/>
+          <br />
+          <label for="show">show password</label>
+          <input type="radio" name="show" />
+          <br />
+          <button type="button">submit</button>
+        </form>
+      </section>
+      <footer>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex numquam veritatis inventore voluptate ullam cupiditate reprehenderit quos optio. Laborum, nesciunt veritatis dolore temporibus aliquid labore tenetur quaerat laudantium dolores molestiae!
+      </footer>
+    </div>
   )
 }
 
