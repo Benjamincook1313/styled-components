@@ -4,9 +4,11 @@ import "./App.css";
 
 function App() {
 
+ const [show, setShow] = useState(false);
 
   return (
-    <div>
+    <>
+
       <header>
         <h1>Styled-Components</h1>
         <nav style={{display: "flex", justifyContent: "space-evenly", width: "100vw"}}>
@@ -21,10 +23,10 @@ function App() {
           <input name="username" type="text" placeholder="JohnDoe55" />
           <br />
           <label htmlFor="pass">password:</label>
-          <input name="pass" type="password" placeholder='asdf1234@'/>
+          <input name="pass" type={show? "text": "password"} placeholder='asdf1234@'/>
           <br />
-          <label for="show">show password</label>
-          <input type="radio" name="show" />
+          <label htmlFor="show">show password</label>
+          <input type="checkbox" name="show" onChange={e => setShow(!show)}/>
           <br />
           <button type="button">submit</button>
         </form>
@@ -32,7 +34,7 @@ function App() {
       <footer>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex numquam veritatis inventore voluptate ullam cupiditate reprehenderit quos optio. Laborum, nesciunt veritatis dolore temporibus aliquid labore tenetur quaerat laudantium dolores molestiae!
       </footer>
-    </div>
+    </>
   )
 }
 
